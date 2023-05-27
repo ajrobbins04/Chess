@@ -36,11 +36,28 @@ public:
 	// Default constructor.
 	Position() : index(0), row(0), col(0) {}
 
-	// Non-default constructor.
-	Position(int i);
+	// Non-default constructor with
+	// index as parameter
+	Position(int i) {
+		
+		index = i;
+		row = i / 8;
+		col = i % 8;
 
-	// Non-default constructor.
-	Position(int r, int c);
+		assertPosition();
+	}
+
+	// Non-default constructor with
+	// the row and column as parameters
+	Position(int r, int c) {
+		row = r;
+		col = c;
+		
+		// index = (row * 8) + col
+		index = calculateIndex(r, c);
+
+		assertPosition();
+	}
 
 	void setFromIndex(int i);
 	int calculateIndex(int r, int c) const;

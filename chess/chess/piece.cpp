@@ -10,6 +10,11 @@
 
 #include "piece.h"
 
+/******************************************************
+ * INITIALIZE
+ * Sets the isWhite, position, and type
+ * Piece object attributes.
+ ******************************************************/
 void Piece::initialize(bool isWhite, Position position, string type) {
 	this->isWhite = isWhite;
 	this->position = position;

@@ -22,7 +22,6 @@ King::King(bool isWhite, Position position) {
  * Get a vector of all the possible moves for this piece
  ******************************************************/
 vector<int> King::getPossibleMoves(Board *board) {
-	cout << "Getting possible moves for King" << endl;
 
 	vector<int> possibleMoves = {};
 

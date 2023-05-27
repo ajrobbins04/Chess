@@ -29,7 +29,7 @@ protected:
 
 	Position position;
 	bool isWhite;
-	string type;
+	string type; // piece type identifier
 
 public:
 
@@ -37,15 +37,14 @@ public:
 
 	void initialize(bool isWhite, Position position, string type);
 
-	virtual vector<int> getPossibleMoves(Board * board) = 0;
-
-	virtual void draw(ogstream& gout) = 0;
-
 	Position * getPosition() { return &position; }
-
-	bool getIsWhite() const  { return isWhite; }
-
-	string getType() { return type; }
+	
+	bool getIsWhite() const { return isWhite; }
+	string getType()  const { return type;    }
+	
+	virtual vector<int> getPossibleMoves(Board * board) = 0;
+	virtual void draw(ogstream& gout) = 0;
+	
 };
 
 

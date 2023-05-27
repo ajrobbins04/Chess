@@ -20,22 +20,6 @@ void Position::assertPosition() {
 	//assert(col <= 7 && col >= 0);
 }
 
-Position::Position(int i) {
-	index = i;
-	row = i / 8;
-	col = i % 8;
-
-	assertPosition();
-}
-
-Position::Position(int r, int c) {
-	row = r;
-	col = c;
-	index = calculateIndex(r, c);
-
-	assertPosition();
-}
-
 /******************************************************
  * SET FROM INDEX
  * Uses a given index value to set a Position
