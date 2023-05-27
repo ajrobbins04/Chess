@@ -42,19 +42,16 @@ public:
 	// Non-default constructor.
 	Position(int r, int c);
 
-	int calculateIndex(int r, int c);
-
-	bool isValidColumn(int c);
-
-	bool isValidPosition(int row, int col);
-
 	void setFromIndex(int i);
-
-	int getRow() const { return row; }
-
-	int getCol() const { return col; }
-
+	int calculateIndex(int r, int c) const;
+	
+	int getRow()   const { return row;   }
+	int getCol()   const { return col;   }
 	int getIndex() const { return index; }
+
+	bool isValidColumn(int c) const;
+	bool isValidPosition(int row, int col) const;
+
 };
 
 

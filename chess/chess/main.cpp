@@ -7,15 +7,17 @@
  *    Starts an instance of a Game
  **********************************************/
 
-#include "uiInteract.h"   // for Interface
-#include "uiDraw.h"       // for draw*
 #include <set>            // for STD::SET
 #include <cassert>        // for ASSERT
 #include <fstream>        // for IFSTREAM
 #include <string>         // for STRING
 #include <iostream>
+
+#include "uiInteract.h"   // for Interface
+#include "uiDraw.h"       // for draw*
 #include "game.h"
 #include "testRunner.h"
+
 using namespace std;
 
 /*************************************
