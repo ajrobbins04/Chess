@@ -32,20 +32,19 @@ private:
 public:
 
    friend TestBoard;
+	
+   void setPiece(int pos, Piece* piece) {
+	   this->board[pos] = nullptr;
+	   this->board[pos] = piece;
+	}
 
-   bool getWhiteTurn() { return this->whiteTurn; }
-
-   Piece* getPiece(int pos) { return this->board[pos]; }
+   bool getWhiteTurn()      const { return this->whiteTurn;  }
+   Piece* getPiece(int pos) const { return this->board[pos]; }
 
    void toggleTurn() {
 	  whiteTurn ? whiteTurn = false : whiteTurn = true;
    }
-   void setPiece(int pos, Piece* piece) {
-	  this->board[pos] = nullptr;
-	  this->board[pos] = piece;
-   }
 
  };
-
 
 #endif /* board_h */

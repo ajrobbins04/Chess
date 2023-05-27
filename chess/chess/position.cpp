@@ -15,22 +15,83 @@
  *
  ******************************************************/
 void Position::assertPosition() {
-	//assert(index <= 63 && index >= 0);
-	//assert(row <= 7 && row >= 0);
-	//assert(col <= 7 && col >= 0);
+
+	// assert(index <= 63 && index >= 0);
+	// assert(row <= 7 && row >= 0);
+	// assert(col <= 7 && col >= 0);
+	
 }
 
+/******************************************************
+ * NON-DEFAULT CONSTRUCTOR
+ * Accepts index value as parameter.
+ ******************************************************/
+Position::Position(int i)
+{
+
+   if (i != -1) // -1 is default value
+   {
+	   
+	   index = i;
+	   row = i / 8;
+	   col = i % 8;
+	   assertPosition();
+	   
+   }
+   else // if index is -1, then so are row and col
+   {
+	   index = i;
+	   row = i;
+	   col = i;
+   }
+   
+}
+/******************************************************
+ * NON-DEFAULT CONSTRUCTOR
+ * Accepts row and col values as parameters.
+ ******************************************************/
+Position::Position(int r, int c)
+{
+	
+	if (r != -1 && c != -1)
+	{
+		row = r;
+		col = c;
+		
+		// index = (row * 8) + col
+		index = calculateIndex(r, c);
+		
+		assertPosition();
+	}
+	else
+	{
+		row = -1;
+		col = -1;
+		index = -1;
+	}
+}
 /******************************************************
  * SET FROM INDEX
  * Uses a given index value to set a Position
  * object's index, row, and col attributes.
  ******************************************************/
 void Position::setFromIndex(int i) {
-	index = i;
-	row = i / 8;
-	col = i % 8;
-
-	assertPosition();
+	
+	if (i != -1) // -1 is default value
+	{
+		
+		index = i;
+		row = i / 8;
+		col = i % 8;
+		assertPosition();
+		
+	}
+	else // if index is -1, then so are row and col
+	{
+		index = i;
+		row = i;
+		col = i;
+	}
 }
 
 /******************************************************

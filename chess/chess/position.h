@@ -32,32 +32,13 @@ private:
 	void assertPosition();
 
 public:
-
+	
 	// Default constructor.
-	Position() : index(0), row(0), col(0) {}
+	Position() : index(-1), row(-1), col(-1) {}
 
-	// Non-default constructor with
-	// index as parameter
-	Position(int i) {
-		
-		index = i;
-		row = i / 8;
-		col = i % 8;
-
-		assertPosition();
-	}
-
-	// Non-default constructor with
-	// the row and column as parameters
-	Position(int r, int c) {
-		row = r;
-		col = c;
-		
-		// index = (row * 8) + col
-		index = calculateIndex(r, c);
-
-		assertPosition();
-	}
+	// Non-default constructors
+	Position(int i);
+	Position(int r, int c);
 
 	void setFromIndex(int i);
 	int calculateIndex(int r, int c) const;

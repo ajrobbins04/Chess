@@ -29,11 +29,9 @@ public:
 	Rook(bool isWhite, Position position);
 
 	bool getHasMoved() const { return this->hasMoved; }
-
-	void toggleHasMoved() { this->hasMoved = true; }
+	void toggleHasMoved()    { this->hasMoved = true; }
 
 	vector<int> getPossibleMoves(Board * board) override;
-
 	void draw(ogstream& gout) override;
 };
 

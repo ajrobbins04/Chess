@@ -199,6 +199,7 @@ void Game::update(Interface* pUI) {
 
    vector <int> possible;
 
+
    // move
    if (move(pUI->getPreviousPosition(), pUI->getSelectPosition())) {
 		pUI->clearSelectPosition();
