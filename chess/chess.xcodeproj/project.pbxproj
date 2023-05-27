@@ -19,6 +19,8 @@
 		02A5A9652A2297D900498660 /* rook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02A5A9642A2297D900498660 /* rook.cpp */; };
 		02A5A96C2A22984A00498660 /* uiDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02A5A96B2A22984A00498660 /* uiDraw.cpp */; };
 		02A5A96F2A22986D00498660 /* uiInteract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02A5A96E2A22986D00498660 /* uiInteract.cpp */; };
+		02A5A9732A229D8700498660 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A5A9722A229D8700498660 /* OpenGL.framework */; };
+		02A5A9752A229D8F00498660 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A5A9742A229D8F00498660 /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +65,8 @@
 		02A5A96D2A22985600498660 /* uiDraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uiDraw.h; sourceTree = "<group>"; };
 		02A5A96E2A22986D00498660 /* uiInteract.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = uiInteract.cpp; sourceTree = "<group>"; };
 		02A5A9702A22988100498660 /* uiInteract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uiInteract.h; sourceTree = "<group>"; };
+		02A5A9722A229D8700498660 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		02A5A9742A229D8F00498660 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A5A9752A229D8F00498660 /* GLUT.framework in Frameworks */,
+				02A5A9732A229D8700498660 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 			children = (
 				02A5A9432A22966F00498660 /* chess */,
 				02A5A9422A22966F00498660 /* Products */,
+				02A5A9712A229D8700498660 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,15 @@
 				02A5A9702A22988100498660 /* uiInteract.h */,
 			);
 			path = chess;
+			sourceTree = "<group>";
+		};
+		02A5A9712A229D8700498660 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02A5A9742A229D8F00498660 /* GLUT.framework */,
+				02A5A9722A229D8700498660 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
