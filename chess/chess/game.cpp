@@ -109,7 +109,7 @@ bool Game::move(int posFrom, int posTo) {
 			// Normal movements
 			board.setPiece(posTo, piece);               // Move piece to.
 			piece->getPosition()->setFromIndex(posTo);    // Set piece's position.
-			board.setPiece(posFrom, nullptr);     // Remove piece from.
+			board.setPiece(posFrom, nullptr);      // Remove piece from.
 			board.toggleTurn();
 
 			// Pawn especial movements

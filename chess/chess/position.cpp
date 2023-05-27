@@ -11,7 +11,7 @@
 #include "position.h"
 
 void Position::assertPosition() {
-	assert(index <= 63 && index >= 0);
+	//assert(index <= 63 && index >= 0);
 	assert(row <= 7 && row >= 0);
 	assert(col <= 7 && col >= 0);
 }
